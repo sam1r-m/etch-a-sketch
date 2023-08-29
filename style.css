@@ -3,4 +3,32 @@
     flex-wrap: wrap;
     width: 1024px;
     border: 3px solid black;
+    box-shadow: 10px 10px 2px black;
+}
+
+#popupSize {
+    border-radius: 8px;
+    padding: 1em 2em;
+    border: none;
+    background-color: bisque;
+    font-size: 36px;
+    display: flex;
+    margin: 2em 0;
+    transition-duration: 0.4s;
+    box-shadow: 10px 10px 2px burlywood;
+}
+
+#popupSize:hover {
+    background-color: blanchedalmond;
+}
+
+#popupSize:active {
+        background-color: burlywood;
+        box-shadow: 0 5px bisque;
+        transform: translateY(4px);
+}
+
+#popupSize, #grid {
+    margin-left: auto;
+    margin-right: auto;
 }
