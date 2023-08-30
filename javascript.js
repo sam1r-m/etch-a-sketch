@@ -17,16 +17,16 @@ function createDivs(gridLength) {
     }
 
     gridDivs = document.querySelectorAll("div.gridDiv");
-    implementHover(gridDivs);
+    implementHover(gridDivs, "black");
 }
 
-function implementHover(gridDivs) {
+function implementHover(gridDivs, color) {
     gridDivs.forEach(e => {
         e.addEventListener('mouseover', () => {
-            e.style.backgroundColor = "cyan";
+            e.style.backgroundColor = color;
         }),
         e.addEventListener('mouseleave', () => {
-            e.style.backgroundColor = "cyan";
+            e.style.backgroundColor = color;
         })
     })
 }
@@ -51,18 +51,19 @@ popupSize.addEventListener('click', () => {
 
 const clearButton = document.getElementById("clear");
 clearButton.addEventListener('click', () => {
-    clearGrid();
-})
-
-function clearGrid() {
     let counter = 0;
-    gridDivs.forEach(e => {
+    gridDivs.forEach(() => {
         counter++;
     })
 
     deleteDivs();
     createDivs(Math.sqrt(counter));
-}
+})
 
+const eraseButton = document.getElementById("erase");
+eraseButton.addEventListener('click', () => {
+    implementHover(gridDivs, "white");
+})
 
+const randomizeColorButton = document.getElementById("randomize")
 
