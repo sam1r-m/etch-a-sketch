@@ -62,7 +62,6 @@ body {
 #controls h2, #popupSize {
     font-size: 36px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
 }
 
 .random {
@@ -71,3 +70,24 @@ body {
     width: 280px;
 }
 
+#picker {
+    font-weight: bold;
+    cursor:not-allowed;
+    margin-bottom: 15px;
+
+}
+
+#controls h2 {
+    margin-bottom: 0;
+}
+
+#controls p {
+    margin-top: 0;
+}
+
+.colorPicker {
+    display: flex;
+}
+
+#colorInput {
+}

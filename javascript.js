@@ -65,5 +65,22 @@ eraseButton.addEventListener('click', () => {
     implementHover(gridDivs, "white");
 })
 
-const randomizeColorButton = document.getElementById("randomize")
+const randomizeColorButton = document.getElementById("randomize");
+randomizeColorButton.addEventListener('click', () => {
+    gridDivs.forEach(e => {
+        e.addEventListener('mouseover', () => {
+            e.style.backgroundColor = randomizeColor();
+        }),
+        e.addEventListener('mouseleave', () => {
+            e.style.backgroundColor = randomizeColor();
+        })
+    })
+})
 
+function randomizeColor() {
+    let redValue = Math.floor(Math.random() * 255);
+    let greenValue = Math.floor(Math.random() * 255);
+    let blueValue = Math.floor(Math.random() * 255);
+
+    return rgbValue = ("rgb(" + redValue + ", " + blueValue + ", " + greenValue + ")");
+}
