@@ -22,10 +22,10 @@ function createDivs(gridLength) {
 
 function implementHover(gridDivs) {
     gridDivs.forEach(e => {
-        e.addEventListener('mouseleave', () => {
+        e.addEventListener('mouseover', () => {
             e.style.backgroundColor = "cyan";
         }),
-        e.addEventListener('mouseover', () => {
+        e.addEventListener('mouseleave', () => {
             e.style.backgroundColor = "cyan";
         })
     })
@@ -48,5 +48,21 @@ popupSize.addEventListener('click', () => {
     deleteDivs();
     createDivs(sizeOfGrid);
 })
+
+const clearButton = document.getElementById("clear");
+clearButton.addEventListener('click', () => {
+    clearGrid();
+})
+
+function clearGrid() {
+    let counter = 0;
+    gridDivs.forEach(e => {
+        counter++;
+    })
+
+    deleteDivs();
+    createDivs(Math.sqrt(counter));
+}
+
 
 
