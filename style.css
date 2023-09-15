@@ -90,4 +90,6 @@ body {
 }
 
 #colorInput {
+    border: none;
+    border-radius: 10px;
 }
